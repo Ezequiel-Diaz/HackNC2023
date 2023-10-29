@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Character Creation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="gametest.css">
+
+  <link rel="stylesheet" href="fonts/EvilEmpire.ttf">
+</head>
+  <body>
+    <!-- 
+    <background-image:url(pictures/backgrounds/catacombsbackground.jpg)> -->
+      
+  <embed src= "sounds/VoyageBegins.mp3" autostart="true" loop="true" width="2" height="0">
+    <h1>Character Creation</h1>
+  
+
+    <div id= "race" >
+        <p>Please select your character's race:</p>
+        <select id="raceSelect">
+            <option value="Dragonborn">Dragonborn</option>
+            <option value="Dwarf">Dwarf</option>
+            <option value="Elf">Elf</option>
+            <option value="Gnome">Gnome</option>
+            <option value="Half-Elf">Half-Elf</option>
+            <option value="Halfling">Halfling</option>
+            <option value="Half-Orc">Half-Orc</option>
+            <option value="Human">Human</option>
+            <option value="Tiefling">Tiefling</option>
+        </select>
+    </div>
+
+
+    
+
+
+
+
+
+      
+    
+    
+    <div id="class">
+        <p>Please select your character's class:</p>
+        <select id="classSelect">
+            <option value="Artificer">Artificer</option>
+            <option value="Barbarian">Barbarian</option>
+            <option value="Bard">Bard</option>
+            <option value="Cleric">Cleric</option>
+            <option value="Druid">Druid</option>
+            <option value="Fighter">Fighter</option>
+            <option value="Monk">Monk</option>
+            <option value="Paladin">Paladin</option>
+            <option value="Ranger">Ranger</option>
+            <option value="Rogue">Rogue</option>
+            <option value="Sorcerer">Sorcerer</option>
+            <option value="Warlock">Warlock</option>
+            <option value="Wizard">Wizard</option>
+        </select>
+    </div>
+
+    <div id="name">
+        <p>Please enter your character's name:</p>
+        <input type="text" id="nameInput">
+    </div>
+
+    <button id="createCharacterButton">Create Character</button>
+
+    <div id="characterAttributes">
+        <h2>Character Attributes</h2>
+        <p>Race: <span id="characterRace"></span></p>
+        <p>Class: <span id="characterClass"></span></p>
+        <p>Name: <span id="characterName"></span></p>
+    </div>
+
+    <!-- <script>
+        document.getElementById('createCharacterButton').addEventListener('click', function () {
+            var selectedRace = document.getElementById('raceSelect').value;
+            var selectedClass = document.getElementById('classSelect').value;
+            var characterName = document.getElementById('nameInput').value;
+
+            document.getElementById('characterRace').textContent = selectedRace;
+            document.getElementById('characterClass').textContent = selectedClass;
+            document.getElementById('characterName').textContent = characterName;
+        });
+    </script> -->
+
+ <br><button id="rollButton">Roll the Dice</button>
+
+  <div id="results">
+      <p>Your character base stats are...</p>
+      <p>Stength: <p id="value1"></p>
+    <p>Dexterity<p id="value2"></p>
+    <p>Constitution<p id="value3"></p>
+    <p>Intelligence<p id="value4"></p>
+    <p>Wisdom<p id="value5"></p>
+    <p>Charisma<p id="value6"></p>
+  </div>
+
+  </div class = "container">
+    <div class="image" style="position: absolute;left: 0; top: 95px;" >      
+      <img id="characterImage" src="" alt="character Image"> 
+
+
+      <div class="text" style="position: absolute;left: 0; top: 95px; ">
+
+        <h1>This is your character. </h1> 
+        <!-- 
+        <script> var characterName = document.getElementById('nameInput').value; </script> -->
+      <!-- <hr> -->
+      </div>
+  </div>
+
+  <script>
+
+        document.getElementById('createCharacterButton').addEventListener('click', function () {
+            var selectedRace = document.getElementById('raceSelect').value;
+            var selectedClass = document.getElementById('classSelect').value;
+            var characterName = document.getElementById('nameInput').value;
+          
+
+            document.getElementById('characterRace').textContent = selectedRace;
+            document.getElementById('characterClass').textContent = selectedClass;
+            document.getElementById('characterName').textContent = characterName;
+        });
+    
+    
+      const D4 = ["1", "2", "3", "4"];
+      const D6 = ["1", "2", "3", "4", "5", "6"];
+      const D8 = ["1", "2", "3", "4", "5", "6", "7", "8"];
+      const D10 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+      const D12 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+      const D20 = [
+          "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+          "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"
+      ];
+      const D10per = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+
+      function rollDie() {
+          console.log("Casting the Die");
+          const value1 = D4[Math.floor(Math.random() * D4.length)];
+          const value2 = D6[Math.floor(Math.random() * D6.length)];
+          const value3 = D8[Math.floor(Math.random() * D8.length)];
+          const value4 = D10[Math.floor(Math.random() * D10.length)];
+          const value5 = D20[Math.floor(Math.random() * D20.length)];
+          const value6 = D10per[Math.floor(Math.random() * D10per.length)];
+
+          document.getElementById("value1").textContent = value1;
+          document.getElementById("value2").textContent = value2;
+          document.getElementById("value3").textContent = value3;
+          document.getElementById("value4").textContent = value4;
+          document.getElementById("value5").textContent = value5;
+          document.getElementById("value6").textContent = value6;
+
+          document.getElementById("results").style.display = "block";
+      }
+
+      document.getElementById("rollButton").addEventListener("click", rollDie);
+
+    
+    document.getElementById('createCharacterButton').addEventListener('click', function () {
+            var raceSelect = document.getElementById("raceSelect").value;
+            var imageElement = document.getElementById("characterImage");
+    }
+  </script>
+</body>
+</html>

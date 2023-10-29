@@ -1,0 +1,126 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'EvilEmpire';
+  src: url('fonts/EvilEmpire.ttf') format('truetype')
+}
+
+body {
+  font-family: "Papyrus";
+  background-image: url('pictures/backgrounds/catacombsbackground.jpg');
+  background-color: #800000;
+  /* Set the background color to red */
+  text-align: center;
+  color: #fff;
+  /* Set text color to white */
+}
+
+header {
+  font-family: 'EvilEmpire';
+  text-align: center;
+  background-color: #800000;
+  /* Darker red background for the header */
+  padding: 20px;
+  opacity: 1;
+  font-size: 1cm;
+}
+
+nav {
+  display: inline;
+  color: white;
+  margin: auto;
+  text-align: center;
+}
+
+nav ul {
+  padding: 3em;
+  margin: auto;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em;
+  margin: auto;
+}
+
+nav li {
+  align-items: center;
+  display: inline;
+  margin-left: 50px;
+  margin-right: 50px;
+  transition: transform 0.3s;
+
+}
+
+nav li {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+nav li:hover {
+  transform: scale(1.2);
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px;
+  /* Add padding around each navigation item */
+  border: 1px solid #555;
+  /* Add a border around each navigation item */
+  border-radius: 5px;
+  /* Add rounded corners  */
+  background-color: #800000;
+  /* Set the background color of the navigation item */
+  transition: transform 0.3s;
+  /* Add a smooth transition effect */
+
+}
+
+nav li a {
+  transition: transform 0.3s;
+}
+nav li a:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+main {
+  padding: 20px;
+}
+
+section {
+  background-color: #FF6666;
+  /* Lighter red background for the content section */
+  padding: 20px;
+  border-radius: 7px;
+  /* Add rounded corners */
+}
+
+h2 {
+  color: #800000;
+  /* Use the darker red color for headings */
+}
+
+footer {
+  font-family: "Times New Roman";
+
+  background-color: #800000;
+  /* Darker red background for the footer */
+  color: #fff;
+  padding: 10px;
+}
