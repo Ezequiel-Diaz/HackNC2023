@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'EvilEmpire';
+  src: url('fonts/EvilEmpire.ttf') format('truetype')
+}
+head{
+font-family: 'EvilEmpire';
+}
+
+text {
+  font-size: 10px;
+  padding-left: 50%;
+  padding-top: 66%;
+  position: absolute;top: 25px;
+}
+
+
+
+imageContainer {
+    width: 300px; /* Set your desired width */
+    height: 300px; /* Set your desired height */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+raceImg {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
